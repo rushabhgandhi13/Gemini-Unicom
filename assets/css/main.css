@@ -469,7 +469,8 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #f0f0f0;
+  border: #ff0000;
   font-size: 14px;
   position: relative;
 }
@@ -645,7 +646,7 @@ h6 {
   inset: 0;
   z-index: 999999;
   overflow: hidden;
-  background: #000;
+  background: #fff; /* Changed to white */
   transition: all 0.6s ease-out;
 }
 
@@ -654,8 +655,8 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #ffffff;
-  border-color: var(--accent-color) transparent var(--accent-color) transparent;
+  border: 6px solid #000; /* Changed to black */
+  border-color: #000 transparent #000 transparent; /* Updated to black */
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -1094,7 +1095,7 @@ section,
 
 .call-to-action:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 50%);
+  background: color-mix(in srgb, #11acb8, transparent 50%);
   position: absolute;
   inset: 0;
   z-index: 2;
