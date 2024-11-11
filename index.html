@@ -20,7 +20,7 @@
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <!-- <link href="assets/vendor/aos/aos.css" rel="stylesheet"> -->
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
@@ -86,11 +86,11 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+      <img src="assets/img/hero-bg.webp" alt="" >
 
       <div class="container">
 
-        <div class="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center text-center" >
           <div class="col-xl-6 col-lg-8">
               <h2><span style="font-weight: bold; color: #fdc807;">Gemini Unicom</span> – A Legacy of Innovation and Prestige</h2>
               <p><span style="font-weight: bold; color: #fdc807;">Gemini Unicom</span> leads the way in delivering cutting-edge travel and organizational solutions, designed to enhance every journey and elevate your experiences.</p>
@@ -171,110 +171,72 @@
 
     <!-- Clients Section -->
     <!-- Add Swiper's CSS if not already included -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
-<section id="clients" class="clients section">
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="swiper init-swiper">
-      <script type="application/json" class="swiper-config">
-        {
-          "loop": true,
-          "speed": 600,
-          "autoplay": {
-            "delay": 5000
-          },
-          "slidesPerView": 3, /* Show 3 images at a time */
-          "spaceBetween": 30, /* Reduced spacing between images */
-          "pagination": {
-            "el": ".swiper-pagination",
-            "type": "bullets",
-            "clickable": true
-          },
-          "breakpoints": {
-            "320": {
-              "slidesPerView": 2,
-              "spaceBetween": 15
-            },
-            "480": {
-              "slidesPerView": 2,
-              "spaceBetween": 20
-            },
-            "640": {
-              "slidesPerView": 3, /* Show 3 images on medium screens */
-              "spaceBetween": 30
-            },
-            "992": {
-              "slidesPerView": 3, /* Show 3 images on larger screens */
-              "spaceBetween": 40
+    <section id="clients" class="clients section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+    
+        <div class="swiper init-swiper">
+          <!-- Swiper JSON configuration -->
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 100
+                }
+              }
             }
-          }
-        }
-      </script>
-      <div class="AvalaibleDiv">
-        <h1 class="AvailableAt">Available at</h1>
-      </div>
-      <div class="swiper-wrapper align-items-center">
-        <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt="" style="width: 60%;"></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt="" style="width: 60%;"></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt="" style="width: 60%;"></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt="" style="width: 60%;"></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-5.webp" class="img-fluid" alt="" style="width: 60%;"></div>
-        <!-- More slides can be added -->
-      </div>      
-      <div class="swiper-pagination"></div>
-    </div>
-  </div> 
-</section>
-
-<!-- Add Swiper's JS if not already included -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<script>
-  // Initialize Swiper manually
-  const swiper = new Swiper('.swiper', {
-    loop: true,
-    speed: 600,
-    autoplay: {
-      delay: 5000,
-    },
-    slidesPerView: 3,
-    spaceBetween: 30, /* Reduced space between slides */
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        spaceBetween: 15,
-      },
-      480: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      640: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-      992: {
-        slidesPerView: 3,
-        spaceBetween: 40,
-      },
-    },
-  });
-</script>
-
-<style>
-  /* Adjust the size of each swiper slide */
-  .swiper-slide {
-    width: 30%; /* Reduced width of each slide to make them smaller */
-    padding-right: 20px; /* Adjust spacing between images */
-    box-sizing: border-box;
-  }
-</style>
-
-
+          </script>
+    
+          <div class="AvalaibleDiv">
+            <h1 class="AvailableAt">Available at</h1>
+          </div>
+          
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-1.png" class="img-fluid" alt="" style="width: 200px; height: auto;">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-2.png" class="img-fluid" alt="" style="width: 200px; height: auto;">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-3.png" class="img-fluid" alt="" style="width: 200px; height: auto;">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-4.png" class="img-fluid" alt="" style="width: 200px; height: auto;">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/clients/client-5.webp" class="img-fluid" alt="" style="width: 200px; height: auto;">
+            </div>
+          </div>
+          
+          <div class="swiper-pagination"></div>
+        </div>
+      </div> 
+    </section>
+    
     
     <!-- Features Section -->
     <section id="features" class="features section">
@@ -473,98 +435,95 @@
                 <img src="./assets/img/masonry-portfolio/p1.jpg" class="img-fluid" alt="">
             </a>
               <div class="portfolio-info">
-                <h4>Uninest Electronics Travel Organizer Bag</h4>
-                <p>Uninest Electronics Travel Organizer, Cable Organizer Bag Waterproof Electronics Accessories Storage Bag for Cord, Charger, Phone, Power Bank, Hard Drive(Grey)</p>
+                <h4>Uninest Electronics Travel Organizer</h4>
+                <p> Cable Organizer Bag Waterproof Electronics Accessories Storage Bag for Cord, Charger, Phone, Power Bank, Hard Drive(Grey)
+                </p>
                 <a href="./assets/img/masonry-portfolio/p1.jpg" title="Uninest Electronic Travel Organizer" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
               </div>
             </div><!-- End Portfolio Item -->
+
+            
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <a href="https://www.amazon.in/Uninest-Organizer-Cosmetics-Underwear-Organiser/dp/B0D9TRKQQS/ref=sr_1_9?dib=eyJ2IjoiMSJ9.fF_bga35hzoTVKV6O5AtbpcDpz7OswAyMWduM2wTzUa1KDIAX_gF_8x9Rz8Ol49jGuPqLYcAcwtEiL_ocmPkBe8bDSO76NQOK38f8OwTyVaKZd14FH2kccgLVos_2x3Rb0GdJyN1C-mmsXrwSd5QhN9ioScfr-oBsihyNg4f5dAQFwU_CpYO0_eO684Al5Yh.G71oF9RKpkC_Np1dAC3woKxWi2G-2bob8EmMI7qFA88&dib_tag=se&keywords=Uninest+Unlocking+Excellence&qid=1731160096&sr=8-9">
-                <img src="./assets/img/masonry-portfolio/p7.jpg" class="img-fluid" alt="">
+              <a href=" https://amzn.in/d/icbFDKN">
+                <img src="./assets/img/masonry-portfolio/p2.jpeg" class="img-fluid" alt="">
               </a>
               <div class="portfolio-info">
                 <h4>Uninest 6pcs Set Travel Organizer Packing Cubes</h4>
                 <p>Uninest 6 Pcs Travel Organizer Pouch Packing Cubes for Clothes Space Savers Bags Cosmetics/Underwear/Socks/Shoes Toiletry Organiser Pouch(Sky Blue)
                 </p>
-                <a href="./assets/img/masonry-portfolio/p7.jpg" title="Uninest 6pcs Set Travel Organizer Packing Cubes" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
-              </div>
-            </div><!-- End Portfolio Item -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <a href="https://www.amazon.in/Uninest-Electronic-Organizer-Accessories-Electronics/dp/B0D9TWGM3H/ref=sr_1_7?dib=eyJ2IjoiMSJ9.fF_bga35hzoTVKV6O5AtbpcDpz7OswAyMWduM2wTzUa1KDIAX_gF_8x9Rz8Ol49jGuPqLYcAcwtEiL_ocmPkBe8bDSO76NQOK38f8OwTyVaKZd14FH2kccgLVos_2x3Rb0GdJyN1C-mmsXrwSd5QhN9ioScfr-oBsihyNg4f5dAQFwU_CpYO0_eO684Al5Yh.G71oF9RKpkC_Np1dAC3woKxWi2G-2bob8EmMI7qFA88&dib_tag=se&keywords=Uninest+Unlocking+Excellence&qid=1731160096&sr=8-7">
-                <img src="./assets/img/masonry-portfolio/p5.jpg" class="img-fluid" alt="">
-              </a>
-              <div class="portfolio-info">
-                <h4>Uninest Electronics Gadget Organizer Travel Bag</h4>
-                <p>Uninest Electronic Gadget Organizer Travel Cable Accessories Bag Travel Cord Organizer Case Compact Electronics Accessories Bag for Cable, Cord, Charger, Phone, Hard Drive (Grey, Polyester)</p>
-                <a href="./assets/img/masonry-portfolio/p5.jpg" title="Uninest Electronic Travel Organizer" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="./assets/img/masonry-portfolio/p2.jpeg" title="Uninest 6pcs Set Travel Organizer Packing Cubes" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
               </div>
             </div><!-- End Portfolio Item -->
 
+
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <a href="https://www.amazon.in/Uninest-Electronics-Organizer-Waterproof-Accessories/dp/B0D9TTWQ47/ref=sr_1_2?dib=eyJ2IjoiMSJ9.fF_bga35hzoTVKV6O5AtbpcDpz7OswAyMWduM2wTzUa1KDIAX_gF_8x9Rz8Ol49jGuPqLYcAcwtEiL_ocmPkBe8bDSO76NQOK38f8OwTyVaKZd14FH2kccgLVos_2x3Rb0GdJyN1C-mmsXrwSd5QhN9ioScfr-oBsihyNg4f5dAQFwU_CpYO0_eO684Al5Yh.G71oF9RKpkC_Np1dAC3woKxWi2G-2bob8EmMI7qFA88&dib_tag=se&keywords=Uninest%2BUnlocking%2BExcellence&qid=1731160096&sr=8-2&th=1">
-                <img src="./assets/img/masonry-portfolio/p2.jpg" class="img-fluid" alt="http://127.0.0.1:3000/Gp/service-details.html">
+              <a href="https://www.amazon.in/Uninest-Electronic-Organizer-Accessories-Electronics/dp/B0D9TWBLTM/ref=sr_1_4?dib=eyJ2IjoiMSJ9.fF_bga35hzoTVKV6O5AtbpcDpz7OswAyMWduM2wTzUYH4K9FInjeC9QeBf6zfZfEOSfJJNOY8UYF2gRjOT4FK4_z--4PcUXRKYREJU6fPHiPPEv6UgxAk42j6onA0dNoMIsVGhef_8F4TqGWIZ9a8V92h-FNSCK49LGssnfCfCUQFwU_CpYO0_eO684Al5Yh.zaRi4vIPmTH3kFJwckne8E0fLZ0Cal8PByoj7oUUcwY&dib_tag=se&keywords=Uninest%2BUnlocking%2BExcellence&qid=1731324770&sr=8-4&th=1">
+                <img src="./assets/img/masonry-portfolio/p4.jpg" class="img-fluid" alt="">
               </a>
-              <div class="portfolio-info"> 
-                <h4>Uninest Electronics Travel Organizer Bag</h4>
-                <p>Uninest Electronics Travel Organizer, Cable Organizer Bag Waterproof Electronics Accessories Storage Bag for Cord, Charger, Phone, Power Bank, Hard Drive(Navy Blue, Polyester)
-                </p>
-                <a href="./assets/img/masonry-portfolio/p2.jpg" title="Uninest Electronic Travel Organizer" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <div class="portfolio-info">
+                <h4>Uninest Electronic Gadget Organizer</h4>
+                <p>UTravel Cable Accessories Bag Travel Cord Organizer Case Compact Electronics Accessories Bag for Cable, Cord, Charger, Phone, Hard Drive (Navy Blue, Polyester)</p>
+                <a href="./assets/img/masonry-portfolio/p4.jpg" title="Uninest Electronic Travel Organizer" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
               </div>
             </div><!-- End Portfolio Item -->
+
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <a href="https://www.amazon.in/Uninest-Organizer-Lightweight-Organizers-Toiletry/dp/B0D9TPHT3K/ref=sr_1_8?dib=eyJ2IjoiMSJ9.fF_bga35hzoTVKV6O5AtbpcDpz7OswAyMWduM2wTzUa1KDIAX_gF_8x9Rz8Ol49jGuPqLYcAcwtEiL_ocmPkBe8bDSO76NQOK38f8OwTyVaKZd14FH2kccgLVos_2x3Rb0GdJyN1C-mmsXrwSd5QhN9ioScfr-oBsihyNg4f5dAQFwU_CpYO0_eO684Al5Yh.G71oF9RKpkC_Np1dAC3woKxWi2G-2bob8EmMI7qFA88&dib_tag=se&keywords=Uninest%2BUnlocking%2BExcellence&qid=1731160096&sr=8-8&th=1">
                 <img src="./assets/img/masonry-portfolio/p6.jpg" class="img-fluid" alt="">
               </a>
               <div class="portfolio-info">
-                <h4>Uninest 7pcs Set Travel Organizer Packing Cubes</h4>
-                <p>Uninest 7pcs Set Travel Organizer Packing Cubes Lightweight Travel Luggage Organizers with Laundry Bag or Toiletry Bag (7 PCS, Beige)</p>
+                <h4>Uninest 7pcs Set Travel Organizer</h4>
+                <p>Packing Cubes Lightweight Travel Luggage Organizers with Laundry Bag or Toiletry Bag (7 PCS, Beige)
+                </p>
                 <a href="./assets/img/masonry-portfolio/p6.jpg" title="Uninest 7pcs Set Travel Organizer Packing Cubes" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
               </div>
             </div><!-- End Portfolio Item -->
 
+
+
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <a href="https://www.amazon.in/Uninest-Electronic-Organizer-Accessories-Electronics/dp/B0D9TWBLTM/ref=sr_1_6?dib=eyJ2IjoiMSJ9.fF_bga35hzoTVKV6O5AtbpcDpz7OswAyMWduM2wTzUa1KDIAX_gF_8x9Rz8Ol49jGuPqLYcAcwtEiL_ocmPkBe8bDSO76NQOK38f8OwTyVaKZd14FH2kccgLVos_2x3Rb0GdJyN1C-mmsXrwSd5QhN9ioScfr-oBsihyNg4f5dAQFwU_CpYO0_eO684Al5Yh.G71oF9RKpkC_Np1dAC3woKxWi2G-2bob8EmMI7qFA88&dib_tag=se&keywords=Uninest+Unlocking+Excellence&qid=1731160096&sr=8-6">
-                <img src="./assets/img/masonry-portfolio/p4.jpg" class="img-fluid" alt="">
+              <a href="https://www.amazon.in/Uninest-Accessories-Organizer-Universal-Organiser/dp/B0D9TVKW17/ref=sr_1_3?dib=eyJ2IjoiMSJ9.fF_bga35hzoTVKV6O5AtbpcDpz7OswAyMWduM2wTzUYH4K9FInjeC9QeBf6zfZfEOSfJJNOY8UYF2gRjOT4FK4_z--4PcUXRKYREJU6fPHiPPEv6UgxAk42j6onA0dNoMIsVGhef_8F4TqGWIZ9a8V92h-FNSCK49LGssnfCfCUQFwU_CpYO0_eO684Al5Yh.zaRi4vIPmTH3kFJwckne8E0fLZ0Cal8PByoj7oUUcwY&dib_tag=se&keywords=Uninest%2BUnlocking%2BExcellence&qid=1731324770&sr=8-3&th=1">
+                <img src="./assets/img/masonry-portfolio/p3.jpg" class="img-fluid" alt="">
               </a>
               <div class="portfolio-info">
-                <h4>Uninest Electronics Gadget Organizer Travel Bag</h4>
-                <p>Uninest Electronic Gadget Organizer Travel Cable Accessories Bag Travel Cord Organizer Case Compact Electronics Accessories Bag for Cable, Cord, Charger, Phone, Hard Drive (Navy Blue, Polyester)</p>
-                <a href="./assets/img/masonry-portfolio/p4.jpg "title="Uninest Electronic Travel Organizer" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <h4>Uninest Accessories Organizer Bag</h4>
+                <p>Universal Travel Gadget Organiser Bag for Cables, Plugs, Chargers, and More, Ideal Size for Pad, Phone, and Hard Disk (24.5cm x 10cm x 18.5cm) (Grey)</p>
+                <a href="./assets/img/masonry-portfolio/p3.jpg   "title="Uninest Electronic Travel Organizer" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <a href="https://www.amazon.in/Uninest-Electronic-Organizer-Accessories-Electronics/dp/B0D9TWGM3H/ref=sr_1_7?dib=eyJ2IjoiMSJ9.fF_bga35hzoTVKV6O5AtbpcDpz7OswAyMWduM2wTzUa1KDIAX_gF_8x9Rz8Ol49jGuPqLYcAcwtEiL_ocmPkBe8bDSO76NQOK38f8OwTyVaKZd14FH2kccgLVos_2x3Rb0GdJyN1C-mmsXrwSd5QhN9ioScfr-oBsihyNg4f5dAQFwU_CpYO0_eO684Al5Yh.G71oF9RKpkC_Np1dAC3woKxWi2G-2bob8EmMI7qFA88&dib_tag=se&keywords=Uninest+Unlocking+Excellence&qid=1731160096&sr=8-7">
-                <img src="./assets/img/masonry-portfolio/p5.jpg" class="img-fluid" alt="">
+              <a href="https://www.amazon.in/Uninest-Organizer-Cosmetics-Underwear-Organiser/dp/B0D9TRKQQS/ref=sr_1_8?dib=eyJ2IjoiMSJ9.fF_bga35hzoTVKV6O5AtbpcDpz7OswAyMWduM2wTzUYH4K9FInjeC9QeBf6zfZfEOSfJJNOY8UYF2gRjOT4FK4_z--4PcUXRKYREJU6fPHiPPEv6UgxAk42j6onA0dNoMIsVGhef_8F4TqGWIZ9a8V92h-FNSCK49LGssnfCfCUQFwU_CpYO0_eO684Al5Yh.zaRi4vIPmTH3kFJwckne8E0fLZ0Cal8PByoj7oUUcwY&dib_tag=se&keywords=Uninest%2BUnlocking%2BExcellence&qid=1731324770&sr=8-8&th=1">
+                <img src="./assets/img/masonry-portfolio/p7.jpg" class="img-fluid" alt="">
               </a>
               <div class="portfolio-info">
-                <h4>Uninest Electronics Gadget Organizer Travel Bag</h4>
-                <p>Uninest Electronic Gadget Organizer Travel Cable Accessories Bag Travel Cord Organizer Case Compact Electronics Accessories Bag for Cable, Cord, Charger, Phone, Hard Drive (Grey, Polyester)</p>
-                <a href="./assets/img/masonry-portfolio/p5.jpg" title="Uninest Electronic Travel Organizer" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <h4>Uninest 6 Pcs Travel Organizer Pouch</h4>
+                <p>Packing Cubes for Clothes Space Savers Bags Cosmetics/Underwear/Socks/Shoes Toiletry Organiser Pouch(Sky Blue)</p>
+                <a href="./assets/img/masonry-portfolio/p7.jpg" title="Uninest Electronic Travel Organizer" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
               </div>
             </div><!-- End Portfolio Item -->
 
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <a href="https://www.amazon.in/Uninest-Organizer-Lightweight-Organizers-Toiletry/dp/B0D9TT62V1/ref=sr_1_11?dib=eyJ2IjoiMSJ9.fF_bga35hzoTVKV6O5AtbpcDpz7OswAyMWduM2wTzUa1KDIAX_gF_8x9Rz8Ol49jGuPqLYcAcwtEiL_ocmPkBe8bDSO76NQOK38f8OwTyVaKZd14FH2kccgLVos_2x3Rb0GdJyN1C-mmsXrwSd5QhN9ioScfr-oBsihyNg4f5dAQFwU_CpYO0_eO684Al5Yh.G71oF9RKpkC_Np1dAC3woKxWi2G-2bob8EmMI7qFA88&dib_tag=se&keywords=Uninest+Unlocking+Excellence&qid=1731160096&sr=8-11">
+              <a href="https://www.amazon.in/Uninest-Organizer-Lightweight-Organizers-Toiletry/dp/B0D9TT62V1/ref=sr_1_10?dib=eyJ2IjoiMSJ9.fF_bga35hzoTVKV6O5AtbpcDpz7OswAyMWduM2wTzUYH4K9FInjeC9QeBf6zfZfEOSfJJNOY8UYF2gRjOT4FK4_z--4PcUXRKYREJU6fPHiPPEv6UgxAk42j6onA0dNoMIsVGhef_8F4TqGWIZ9a8V92h-FNSCK49LGssnfCfCUQFwU_CpYO0_eO684Al5Yh.zaRi4vIPmTH3kFJwckne8E0fLZ0Cal8PByoj7oUUcwY&dib_tag=se&keywords=Uninest+Unlocking+Excellence&qid=1731326198&sr=8-10">
                 <img src="./assets/img/masonry-portfolio/p8.jpg" class="img-fluid" alt="">
               </a>
               <div class="portfolio-info">
-                <h4>Uninest 6Pcs set Travel Organizer.</h4>
-                <p>Uninest 6pcs Set Travel Organizer Packing Cubes Lightweight Travel Luggage Organizers with Laundry Bag or Toiletry Bag (6 PCS, Grey)</p>
+                <h4>Uninest 6pcs Set Travel Organizer</h4>
+                <p>Packing Cubes Lightweight Travel Luggage Organizers with Laundry Bag or Toiletry Bag (6 PCS, Grey)</p>
                 <a href="./assets/img/masonry-portfolio/p8.jpg" title="Uninest 6Pcs set Travel Organizer." data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
               </div>
             </div>
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <a href=""></a>
               <img src="./assets/img/masonry-portfolio/p9.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Uninest - Travel Toiletry Bag for Women, Waterproof Hanging Cosmetic Organizer.</h4>
@@ -575,35 +534,24 @@
             </div>
             <!-- End Portfolio Item -->
 
+
+
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="">
+                <img src="./assets/img/masonry-portfolio/p10.jpeg" class="img-fluid" alt="http://127.0.0.1:3000/Gp/service-details.html">
+              </a>
+              <div class="portfolio-info"> 
+                <h4>Uninest Electronics Travel Organizer Bag</h4>
+                <p>Uninest Electronics Travel Organizer, Cable Organizer Bag Waterproof Electronics Accessories Storage Bag for Cord, Charger, Phone, Power Bank, Hard Drive(Navy Blue, Polyester)
+                </p>
+                <a href="./assets/img/masonry-portfolio/p10.jpeg" title="Uninest Electronic Travel Organizer" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div> 
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+            <!-- -->
+            <!-- End Portfolio Item -->
 
           </div><!-- End Portfolio Container -->
 
@@ -684,117 +632,122 @@
 
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section dark-background">
+    <!-- Include Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-      <img src="assets/img/testimonials-bg.jpg" class="testimonials-bg" alt="">
-    
-      <div class="container" >
-    
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-    
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpeg" class="testimonial-img" alt="">
-                <h3>Nayan Mandliya</h3>
-                <h4>Frequent Traveler</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>“Uninest's travel organizers have completely transformed the way I pack. The compartments make it easy to store everything securely—no more tangled cords or misplaced chargers!”</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-    
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Stuti Shah</h3>
-                <h4>Photographer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>“I use Uninest’s gadget bags to store my camera equipment and accessories. It’s so durable and water-resistant, which keeps my gear safe, no matter the conditions.”</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-    
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpeg" class="testimonial-img" alt="">
-                <h3>Diya sanghavi</h3>
-                <h4>Travel Blogger</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>“Uninest’s packing cubes have changed the way I travel! I can organize clothes, toiletries, and tech gear with ease. My suitcase stays neat and organized every time.”</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-    
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-4.avif" class="testimonial-img" alt="">
-                <h3>Mayur Dadas</h3>
-                <h4>Digital Nomad</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>“The electronics travel organizer from Uninest keeps my cables, chargers, and hard drives perfectly secure. It’s sleek, compact, and ideal for travel.”</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-    
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>Gulab Rathore</h3>
-                <h4>Entrepreneur</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>“Uninest’s travel pouches are simply the best! From business trips to vacations, they keep everything organized and easy to find.”</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-    
+<!-- Testimonials Section -->
+<!-- Include Swiper CSS -->
+<section id="testimonials" class="testimonials section dark-background">
+
+  <img src="assets/img/testimonials-bg.webp" class="testimonials-bg" alt="">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="swiper init-swiper">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          }
+        }
+      </script>
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-1.jpeg" class="testimonial-img" alt="">
+            <h3>Nayan Mandliya</h3>
+            <h4>Ceo &amp; Founder</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
           </div>
-          <div class="swiper-pagination"></div>
-        </div>
-    
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+            <h3>Stuti Shah</h3>
+            <h4>Designer</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-3.jpeg" class="testimonial-img" alt="">
+            <h3>Mayur Dadas</h3>
+            <h4>Store Owner</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-4.webp" class="testimonial-img" alt="">
+            <h3>Hema Bhaliya</h3>
+            <h4>Freelancer</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+            <h3>Diya sanghavi</h3>
+            <h4>Entrepreneur</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
       </div>
-    
-    </section>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+
+</section>
     <!-- /Testimonials Section -->
 
     <!-- Team Section -->
@@ -982,14 +935,14 @@
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
+  <footer id="footer" class="footer ">
 
     <div class="footer-top">
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 footer-about">
             <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename"><i><b>UNINEST </i></b><br>
+              <span class="sitename"><i><b>GEMINI UNICOM</i></b><br>
                 <h5><i><b>Unlocking Excellence...</i></b></h5>
               </span>
             </a>
@@ -1001,9 +954,9 @@
             </div>
             <div class="social-links d-flex mt-4">
               <a href="https://www.amazon.in/s?k=Uninest+Unlocking+Excellence&ref=bl_dp_s_web_0"><i class="bi bi-amazon"></i></a>
-              <a href="">
+              <!-- <a href="">
                 <img src="./assets/img/client-2.png" alt="Flipkart" style="width: 24px; height: 24px;">
-              </a>
+              </a> -->
             </div>
             
           </div>
